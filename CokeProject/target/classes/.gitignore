@@ -1,6 +1,2 @@
-/db/
-/event/
-/login/
 /main/
-/manager/
-/pay/
+/util/

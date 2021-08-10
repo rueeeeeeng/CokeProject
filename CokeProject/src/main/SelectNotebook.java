@@ -40,6 +40,7 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 import pay.Cart;
+import util.ButtonUtil;
 
 public class SelectNotebook extends JFrame implements ActionListener, KeyListener {
 	private JPanel p1, p2, p3;
@@ -53,6 +54,7 @@ public class SelectNotebook extends JFrame implements ActionListener, KeyListene
 	private String lib_name;
 	private String lib_price;
 	private boolean checkAddCart;
+	private ButtonUtil btnText;
 
 	public SelectNotebook(String title, int width, int height) {
 		setTitle(title);
@@ -82,6 +84,8 @@ public class SelectNotebook extends JFrame implements ActionListener, KeyListene
 		tfSearch.addKeyListener(this);
 		p1.add(tfSearch);
 
+		btnText = new ButtonUtil("text");
+		p1.add(btnText);
 		btnSearch = new JButton("Search"); // 검색 기능
 		btnSearch.setHorizontalAlignment(SwingConstants.CENTER);
 		btnSearch.setBackground(Color.WHITE);
