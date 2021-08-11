@@ -16,8 +16,9 @@ import javax.swing.border.LineBorder;
 
 import db.DB_Lib;
 import util.ButtonUtil;
+import util.Frames;
 
-public class Start extends JFrame implements ActionListener {
+public class Start extends Frames implements ActionListener {
 
 	private JButton btnManagerLogin;
 	private JButton btnUserLogin;
@@ -28,7 +29,7 @@ public class Start extends JFrame implements ActionListener {
 		setTitle(title); // 제목
 		setSize(width, height); // 너비, 높이
 		setLocationRelativeTo(this);
-		setResizable(false);
+//		setResizable(false);
 //      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 프로그램이 끝나면 닫고 종료한다
 
 		// 레이아웃
