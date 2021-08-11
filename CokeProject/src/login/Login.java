@@ -26,7 +26,7 @@ import manager.ProductAddAndDelete;
 import util.ButtonUtil;
 import util.Frames;
 
-public class Customer_Login extends Frames implements ActionListener {
+public class Login extends Frames implements ActionListener {
 
 	private JButton btnOK;
 	private JButton btnFindID, btnFindPW;
@@ -36,7 +36,7 @@ public class Customer_Login extends Frames implements ActionListener {
 	private JPasswordField tfPW;
 	private JPanel p1, p2, p3, p2_left, p2_right;
 
-	public Customer_Login(String title, int width, int height) {
+	public Login(String title, int width, int height) {
 		setTitle(title); // 제목
 		setSize(width, height); // 너비, 높이
 		setLocationRelativeTo(this); // 위치
@@ -105,7 +105,7 @@ public class Customer_Login extends Frames implements ActionListener {
 
 	public static void main(String[] args) {
 		db.DB_Lib.init();
-		new Customer_Login("고객 로그인", 400, 230);
+		new Login("고객 로그인", 400, 230);
 
 	}
 

@@ -36,7 +36,7 @@ import com.mysql.cj.xdevapi.Result;
 
 import db.DB_Lib;
 import event.Event;
-import login.Customer_Login;
+import login.Login;
 
 public class CustomerMain extends JFrame implements ActionListener {
 	private JPanel p1, p2, p3, p4, p5, p6, p7, p8;
@@ -348,7 +348,7 @@ public class CustomerMain extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null, "로그아웃 되었습니다!");
 				lbName.setText("로그인 해주세요.");
 				dispose();
-				new Customer_Login("고객 로그인", 350, 230);
+				new Login("고객 로그인", 350, 230);
 			}
 
 		} else if (obj == btnNote) { // 노트북 상품창

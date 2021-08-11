@@ -12,7 +12,7 @@ public class ButtonUtil extends JButton {
 		setBackground(Color.WHITE);
 		setForeground(Colors.MainColor);
 		setHorizontalAlignment(SwingConstants.CENTER);
-
+		
 	}
 
 }

@@ -15,14 +15,16 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 import db.DB_Lib;
+import util.ButtonUtil;
 
-public class LoginMain extends JFrame implements ActionListener {
+public class Start extends JFrame implements ActionListener {
 
 	private JButton btnManagerLogin;
 	private JButton btnUserLogin;
 	private JPanel p1, p2;
+	private ButtonUtil btnStart;
 
-	public LoginMain(String title, int width, int height) {
+	public Start(String title, int width, int height) {
 		setTitle(title); // 제목
 		setSize(width, height); // 너비, 높이
 		setLocationRelativeTo(this);
@@ -42,7 +44,7 @@ public class LoginMain extends JFrame implements ActionListener {
 		p2 = new JPanel();
 		p2.setBackground(Color.WHITE);
 		p2.setLocation(25, 30);
-
+/*
 		btnManagerLogin = new JButton("Manager");
 //      btnManagerLogin.setBackground(Color.WHITE);
 		btnManagerLogin.addActionListener(this);
@@ -57,7 +59,12 @@ public class LoginMain extends JFrame implements ActionListener {
 
 		p2.add(btnManagerLogin);
 		p2.add(btnUserLogin);
-
+*/
+		
+		btnStart = new ButtonUtil("START");
+		btnStart.addActionListener(this);
+		btnStart.setBorder(new LineBorder(Color.WHITE));
+		p2.add(btnStart);
 		add(p1, BorderLayout.NORTH);
 		add(p2);
 
@@ -67,19 +74,16 @@ public class LoginMain extends JFrame implements ActionListener {
 
 	public static void main(String args[]) {
 		db.DB_Lib.init();
-		new LoginMain("Login", 350, 200);
+		new Start("", 350, 200);
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		if (obj == btnManagerLogin) {
-			new AdminLogin("관리자 로그인", 350, 230);
-			this.setVisible(false);
-		} else if (obj == btnUserLogin) {
-			new Customer_Login("고객 로그인", 350, 230);
-			this.setVisible(false);
+		if(obj==btnStart) {
+			dispose();
+			new Login("고객 로그인", 400, 230);
 		}
 	}
 }
