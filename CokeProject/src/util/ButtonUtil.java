@@ -11,6 +11,7 @@ public class ButtonUtil extends JButton {
 		setText(text);
 		setBackground(Colors.MainColor);
 		setHorizontalAlignment(SwingConstants.CENTER);
+		
 	}
 	
 	
