@@ -32,6 +32,7 @@ public class FindId extends JFrame implements ActionListener{
       setLocationRelativeTo(this);
       setResizable(false);
       
+      
       p1 = new JPanel();
       add(p1, BorderLayout.CENTER);
       
