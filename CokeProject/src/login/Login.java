@@ -155,11 +155,11 @@ public class Login extends Frames implements ActionListener {
 
 	private int checkIDPW(String id, String pw) {
 		int check = 0;
-		String sql1 = "SELECT * FROM CUSTOMER WHERE ID = '" + id + "' AND PW = '" + pw + "'";
-		String sqlAD = "SELECT * FROM ADMIN WHERE ID = '" + id + "' AND PW = '" + pw + "'";
+		String sqlCus = "SELECT * FROM CUSTOMER WHERE ID = '" + id + "' AND PW = '" + pw + "'";
+		String sqlAdmin = "SELECT * FROM ADMIN WHERE ID = '" + id + "' AND PW = '" + pw + "'";
 
-		ResultSet rs1 = db.DB_Lib.getResultSet(sql1);
-		ResultSet rs2 = db.DB_Lib.getResultSet(sqlAD);
+		ResultSet rs1 = db.DB_Lib.getResultSet(sqlCus);
+		ResultSet rs2 = db.DB_Lib.getResultSet(sqlAdmin);
 
 		try {
 			if (rs1.next()) { // 고객 로그인
