@@ -41,8 +41,9 @@ import javax.swing.table.TableRowSorter;
 
 import pay.Cart;
 import util.ButtonUtil;
+import util.Frames;
 
-public class SelectNotebook extends JFrame implements ActionListener, KeyListener {
+public class SelectNotebook extends Frames implements ActionListener, KeyListener {
 	private JPanel p1, p2, p3;
 	private JTextField tfSearch;
 	private JButton btnBack, btnSearch, btnCart, btnRefresh, btnGoCart;
@@ -62,7 +63,7 @@ public class SelectNotebook extends JFrame implements ActionListener, KeyListene
 		setLocationRelativeTo(this);
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
-		setResizable(false);
+//		setResizable(false);
 //		setUndecorated(true); //타이틀바 날리기
 
 		JPanel mainPanel = new JPanel(new BorderLayout());

@@ -26,7 +26,7 @@ import manager.ProductAddAndDelete;
 import util.ButtonUtil;
 import util.Frames;
 
-public class Customer_Login extends Frames implements ActionListener {
+public class Login extends Frames implements ActionListener {
 
 	private JButton btnOK;
 	private JButton btnFindID, btnFindPW;
@@ -36,7 +36,7 @@ public class Customer_Login extends Frames implements ActionListener {
 	private JPasswordField tfPW;
 	private JPanel p1, p2, p3, p2_left, p2_right;
 
-	public Customer_Login(String title, int width, int height) {
+	public Login(String title, int width, int height) {
 		setTitle(title); // 제목
 		setSize(width, height); // 너비, 높이
 		setLocationRelativeTo(this); // 위치
@@ -105,7 +105,7 @@ public class Customer_Login extends Frames implements ActionListener {
 
 	public static void main(String[] args) {
 		db.DB_Lib.init();
-		new Customer_Login("고객 로그인", 400, 230);
+		new Login("고객 로그인", 400, 230);
 
 	}
 
@@ -155,11 +155,11 @@ public class Customer_Login extends Frames implements ActionListener {
 
 	private int checkIDPW(String id, String pw) {
 		int check = 0;
-		String sql1 = "SELECT * FROM CUSTOMER WHERE ID = '" + id + "' AND PW = '" + pw + "'";
-		String sqlAD = "SELECT * FROM ADMIN WHERE ID = '" + id + "' AND PW = '" + pw + "'";
+		String sqlCus = "SELECT * FROM CUSTOMER WHERE ID = '" + id + "' AND PW = '" + pw + "'";
+		String sqlAdmin = "SELECT * FROM ADMIN WHERE ID = '" + id + "' AND PW = '" + pw + "'";
 
-		ResultSet rs1 = db.DB_Lib.getResultSet(sql1);
-		ResultSet rs2 = db.DB_Lib.getResultSet(sqlAD);
+		ResultSet rs1 = db.DB_Lib.getResultSet(sqlCus);
+		ResultSet rs2 = db.DB_Lib.getResultSet(sqlAdmin);
 
 		try {
 			if (rs1.next()) { // 고객 로그인
