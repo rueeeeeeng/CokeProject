@@ -43,6 +43,7 @@ public class Login extends Frames implements ActionListener {
 //		setResizable(false); //창 사이즈 조정 금지
 //   	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 프로그램이 끝나면 닫고 종료한다 
 
+	
 		// 레이아웃
 		setLayout(new BorderLayout());
 
