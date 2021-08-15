@@ -52,6 +52,9 @@ public class Start extends Frames implements ActionListener {
 		btnManagerLogin.setBorder(new LineBorder(Color.WHITE));
 		btnManagerLogin.setPreferredSize(new Dimension(70, 35));
 
+
+
+
 		btnUserLogin = new JButton("Customer");
 //      btnUserLogin.setBackground(Color.WHITE);
 		btnUserLogin.setBorder(new LineBorder(Color.WHITE));
