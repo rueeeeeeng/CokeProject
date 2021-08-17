@@ -32,7 +32,6 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
-import com.mysql.cj.xdevapi.Result;
 
 import db.DB_Lib;
 import event.Event;

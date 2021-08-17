@@ -21,7 +21,6 @@ import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
 
 import db.DB_Lib;
 
